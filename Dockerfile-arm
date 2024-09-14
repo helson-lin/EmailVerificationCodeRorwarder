@@ -1,0 +1,6 @@
+FROM ubuntu:18.04
+COPY ./dist/emailforwarder-linux-arm64 /app/
+WORKDIR /app
+CMD chmod +x emailforwarder-linux-arm64
+
+ENTRYPOINT ["./emailforwarder-linux-arm64"]
